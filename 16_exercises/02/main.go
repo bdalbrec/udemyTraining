@@ -7,15 +7,8 @@ func main() {
 	fmt.Print("Please enter an integer: ")
 	fmt.Scan(&input)
 
-	calculate := func() {
-		x := input / 2
-		var y bool
-		if input%2 == 0 {
-			y = true
-		} else {
-			y = false
-		}
-		fmt.Printf("half(%d) returns (%d, %t)", input, x, y)
+	calculate := func(n int) (int, bool) {
+		return n / 2, n%2 == 0
 	}
-	calculate()
+	fmt.Println(calculate(input))
 }

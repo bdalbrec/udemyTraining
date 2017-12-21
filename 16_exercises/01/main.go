@@ -12,13 +12,5 @@ func main() {
 }
 
 func half(z int) (int, bool) {
-	x := z / 2
-	var y bool
-	if z%2 == 0 {
-		y = true
-	} else {
-		y = false
-	}
-
-	return x, y
+	return z / 2, z%2 == 0
 }
