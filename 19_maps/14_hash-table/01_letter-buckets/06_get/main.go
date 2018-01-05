@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	res, err := http.Get("https://textfiles.com/etext/AUTHORS/TWAIN/sawyr10.txt")
+	res, err := http.Get("http://www.gutenberg.org/files/2701/old/moby10b.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
