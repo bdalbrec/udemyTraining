@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -27,6 +28,7 @@ func gen(nums ...int) chan int {
 func factorial(n chan int) chan int {
 	out := make(chan int)
 	go func() {
+		time.Sleep(3 * time.Second)
 		total := 1
 		for i := <-n; i > 0; i-- {
 			total *= i
